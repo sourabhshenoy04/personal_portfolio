@@ -1,5 +1,8 @@
 html {
+    /* font-size: 62.5%; */
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body {
@@ -7,7 +10,8 @@ body {
     background-size: 400% 400%;
     animation: 8s colorchange ease-in-out infinite;
     font-family: sans-serif;
-    overflow-x: hidden;
+    overflow: visible;
+    transition: .2s linear !important;
 
 }
 
@@ -51,17 +55,15 @@ body {
 /* For Small Devices */
 @media screen and (max-width: 350px) {}
 
+/* 
+   defau;lt  */
 * {
-     /* box-sizing: border-box; */
-    list-style: none;
-    margin: 0;
+    /* box-sizing: border-box; */
     padding: 0;
+    margin: 0;
     text-decoration: none;
-    /* outline: none;
-    border: none; */
-    transition: all .2s linear;
+    list-style: none;
 }
-
 
 header a {
     text-decoration: none;
@@ -173,93 +175,41 @@ ul li:hover {
         display: block;
     }
 }
-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 25rem;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
-    padding: 1rem 1rem 1rem 1rem;
-}
 
-header img {
-    height: 17rem;
-    width: 17rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-    border: .7rem solid yellow;
-}
-
-header .user .name {
-    font-size: 1 rem;
-    color: white;
-}
-
-header .user .post {
-    font-size: 1 rem;
-    color: white;
-}
-
-header .navbar {
-    width: 100%;
-
-}
-
-header .navbar ul {
-    list-style: none;
-    padding: 1rem 3rem;
-}
-
-header .navbar ul li a {
-    display: block;
-    padding: 1rem;
-    margin: 1rem 0;
-    background: #23a6d5;
-    color: whitesmoke;
-    font-size: 1rem;
-    border-radius: 1rem;
-    text-decoration: none;
-}
-
-header .navbar ul li a:hover {
-    background-color: #23d5ab;
-}
-
-#menu {
+/* theme */
+#theme-toggler {
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: rgb(218, 218, 218);
+    background: transparent;
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
     z-index: 1000;
-    display: none;
+    /* display: none; */
+    border-right: 50%;
+    border-radius: 50%;
+    background: #23a6d5;
 }
 
-
+/* .active {
+    color: rgb(255, 41, 41);
+} */
 
 /* hero section */
-#home {
+ #home {
     position: relative;
     width: 80%;
     height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10% 0;
+    padding: 30px 10% 0;
+    overflow-x: visible;
 }
 
 .homecontent {
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .homeimg img {
@@ -381,10 +331,32 @@ header .navbar ul li a:hover {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    #home {
+        padding: 30px 5%;
+        height: auto;
+    }
+
+    .homeimg img {
+        margin-bottom: 20px;
+    }
+
+    .homecontent h1 {
+        font-size: 40px;
+    }
+
+    .homecontent h3 {
+        font-size: 24px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
 
 
 
-/* links to social media section */
 
 /* footer */
 /* rocket */
@@ -403,12 +375,12 @@ footer {
     justify-content: center;
     /* background-color: black;
     border: rgb(187, 195, 202) solid 1px; */
-
+    overflow-x: hidden;
 }
 
 footer .credit {
 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgb(0, 0, 0);
     padding: 1rem 0;
     text-align: center;
@@ -420,10 +392,10 @@ footer span:hover {
     color: blueviolet;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .footer {
         font-size: 14px;
         padding: 10px;
         width: 100%;
     }
-}
+} */
