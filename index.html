@@ -102,6 +102,11 @@
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+    //mobile menu
+    function toggleMobileMenu(menu) {
+      menu.classList.toggle('open');
+    }
+    //autotype
     $(document).ready(function () {
       $('#menu').onclick(function () {
         $(this).toggleClass('fa-times')
