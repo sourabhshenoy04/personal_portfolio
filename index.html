@@ -21,6 +21,16 @@
 </head>
 
 <body>
+    <!-- pre loader -->
+    <div id="preloader">
+        <p style="text-align: center; padding-top: 14rem;">Welcome to my Personal Portoflio! <br> The page is Loading...
+        </p>
+    </div>
+    <!-- light/dark theme -->
+    <div class="theme-btn flex-center">
+        <i class='bx bxs-sun'></i>
+        <i class='bx bxs-moon'></i>
+    </div>
     <!-- Navigation Bar -->
     <div class="nav_toggle" id="nav-toggle">
         <i class='bx bxs-grid-alt'></i>
@@ -275,7 +285,7 @@
             <h2 data-heading="My" class="section_title">---Journey---</h2>
             <div class="qualification_container container grid">
                 <div class="education">
-                    <h3 class="qualification_title"><i class='bx bxs-graduation'></i> Education</h3>
+                    <h3 class="qualification_title"><i class='bx bxs-graduation'></i>Education</h3>
                     <div class="timeline">
                         <div class="timeline_item">
                             <div class="circle_dot"></div>
@@ -298,7 +308,7 @@
                     </div>
                 </div>
                 <div class="experience">
-                    <h3 class="qualification_title"><i class='bx bx-briefcase'></i> Work</h3>
+                    <h3 class="qualification_title"><i class='bx bx-briefcase'></i>Work</h3>
                     <div class="timeline">
                         <div class="timeline_item">
                             <div class="circle_dot"></div>
@@ -390,8 +400,7 @@
                     <p class="footer_copy">
                         <center>
                             <p class="footer_copy">
-                                < Designed and Developed with <i class='bx bx-heart-circle bx-flashing'
-                                    style="color:tomato"></i> 
+                                < Made with <i class='bx bx-heart-circle bx-flashing' style="color:tomato"></i>
                                     by /> <br>
                                     <span class="myName">
                                         < Sourabh Shenoy />
@@ -402,6 +411,28 @@
                 </div>
         </footer>
         <a href="#" class="top"><i class='bx bx-up-arrow-alt bx-fade-up' style="color: azure;"></i></a>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6Az1bD-Jgjs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen style="display: none;"></iframe>
+
+
     </main>
     <hr>
     <!-- main js -->
@@ -409,8 +440,13 @@
     <!-- autotype typed javascript -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
-//simply alert 
-         alert("Hello User! Welcome to My Personal Portfolio!");
+        var loader = document.getElementById('preloader');
+        window.addEventListener('load', function () {
+            loader.style.display = 'none';
+        })
+
+        // alert
+        // alert("Hello User! Welcome to My Personal Portfolio!");
         //autotype
         var typed = new Typed(".auto_type", {
             strings: ["an Engineering Student", "a Tech Enthusiast", "", ""],
