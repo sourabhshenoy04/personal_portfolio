@@ -1,3 +1,20 @@
+// Light/ Dark theme
+const themeBtn = document.querySelector('.theme-btn');
+themeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    themeBtn.classList.toggle('sun');
+    localStorage.setItem('saved-theme', getCurrentTheme());
+    localStorage.setItem('saved-icon', getCurrentIcon());
+});
+const getCurrentTheme= () => document.body.classList.contains('dark-theme')?'dark':'light';
+const getCurrentIcon= () => themeBtn.classList.contains('sun')?'sun':'moon';
+const savedTheme = localStorage.getItem('saved-theme');
+const savedIcon = localStorage.getItem('saved-icon');
+if(savedTheme){
+    document.body.classList[savedTheme === 'dark' ? 'add' : 'remove' ]('dark-theme');
+   themeBtn.classList[savedIcon === 'sun' ? 'add' : 'remove' ]('sun');
+}
+
 /*Show Navigation bar*/
 const navMenu = document.getElementById('sidebar'),
 navToggle = document.getElementById('nav-toggle'),
@@ -31,7 +48,7 @@ tabs.forEach(tab => {
         tab.classList.add('skills_active')
     })
 })
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/* Scroll sections active */
 const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', navHighlighter);
 function navHighlighter(){
