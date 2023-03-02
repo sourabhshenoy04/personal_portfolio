@@ -72,6 +72,54 @@
     display: flex;
     font-size: xx-large;
 }
+/* preloader */
+#preloader{
+    background: #000 url('../img/output-onlinegiftools.gif') no-repeat center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+/* light/dark theme */
+.theme-btn{
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background: transparent;
+    /* backdrop-filter:blur(20px); */
+    width: 50px;
+    font-size: 1.2em;
+    border-radius: 5px 0 0;
+    box-shadow: whitesmoke;
+    cursor: pointer;
+}
+.theme-btn .bxs-sun, .theme-btn.sun .bxs-moon{
+    display: none;
+}
+.dark-theme{
+    --body-color:white;
+    --text-color:black;
+    --box-color:grey;
+    
+}
+.dark-theme p{
+    color: rgb(0, 0, 0);
+}
+.dark-theme #preloader{
+    background: #fff url('../img/output-onlinegiftools.gif') no-repeat center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+.theme-btn.sun .bxs-sun{
+    display: block;
+}
 /* Base */
 *{
     margin: 0;
@@ -207,7 +255,7 @@ button,input{
     right: 1.5rem;
     top: 2rem;
     font-size: 2.2rem;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -667,8 +715,11 @@ textarea.input{
     text-align: center;
     margin-top: 4.5rem;
 }
-.footer span:hover{
-    color: brown;
+
+.footer span {
+    background: -webkit-linear-gradient(rgb(30, 0, 255), rgb(170, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /*Media queries */
 /* For Large Devices */
