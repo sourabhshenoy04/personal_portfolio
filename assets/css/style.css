@@ -182,7 +182,7 @@ button,input{
     display: block;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    color: aliceblue;
+    color: rgb(145, 146, 147);
 }
 /*Navigation Bar */
 .sidebar{
