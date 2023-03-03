@@ -100,9 +100,9 @@
     display: none;
 }
 .dark-theme{
-    --body-color:white;
+    --body-color:rgb(203, 203, 203);
     --text-color:black;
-    --box-color:grey;
+    --box-color:rgb(255, 236, 236);
     
 }
 .dark-theme p{
