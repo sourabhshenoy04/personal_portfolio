@@ -514,7 +514,7 @@ button,input{
     align-items: center;
     column-gap: .4rem;
     font-size: var(--small-font-size);
-    color: var(--skin-color);
+    color: rgb(169 135 255);
 }
 /*Skills Section */
 .skills_container{
