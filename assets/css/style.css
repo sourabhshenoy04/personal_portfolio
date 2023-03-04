@@ -322,15 +322,6 @@ button,input{
     font-weight: var(--font-medium);
     
 }
-.home_social-follow::after{
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2px;
-    background-color: var(--text-color);
-    right: -45%;
-    top: 50%;
-}
 .home_social-link{
     display: inline-flex;
     column-gap: 1rem;
