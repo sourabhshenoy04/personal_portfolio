@@ -471,6 +471,7 @@ button,input{
     position: relative;
     margin-bottom: var(--mb-2-5);
     padding-left: 3rem;
+    cursor: pointer;
 }
 .timeline_item:last-child{
     margin-bottom: 0;
