@@ -1,5 +1,5 @@
 
-![Logo] <img src = "./assets/img/faviconf.png" width = 600px>
+ <img src = "./assets/img/faviconf.png" width = 600px>
 
 
 # Personal Portfolio
