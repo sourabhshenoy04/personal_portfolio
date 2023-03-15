@@ -1,5 +1,5 @@
 
-![Logo](./assets/img/favicon.png)
+![Logo](./assets/img/faviconf.png)
 
 
 # Personal Portfolio
