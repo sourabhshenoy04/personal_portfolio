@@ -15,10 +15,12 @@ This project shows my professional experience, skills and accomplishments in an 
 
 ## Features
 
-- Light/dark mode 
+- Switch between Light and Dark mode 
 - Animated icons
 - Preloader
 - Responsive
+- Custom Favicon (My logo is used)
+  
 
 
 
