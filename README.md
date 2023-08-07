@@ -10,7 +10,11 @@ This project shows my professional experience, skills and accomplishments in an 
 
 
 ## 🛠 Tech Stack Used
- HTML, CSS, Javascript
+- Language used: HTML, CSS, JavaScript
+- Software used: Visual Studio Code
+- Icons used: Boxicons
+- Fonts used from: Google Fonts
+
 
 
 ## Features
