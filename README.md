@@ -5,7 +5,7 @@
 # Personal Portfolio
 
 
-This project shows my professional experience, skills and accomplishments in an organized manner. This project includes special features to enhance the user experience such as light/dark mode for readability, animated icons to add interactivity and a preloader to prevent premature page exits.
+This project shows my professional experience, skills and accomplishments in an organized manner. This project includes special features to enhance the user experience such as light/dark mode for readability, animated icons to add interactivity and a preloader to prevent premature page exits. 
 
 
 
@@ -18,6 +18,7 @@ This project shows my professional experience, skills and accomplishments in an 
 - Light/dark mode 
 - Animated icons
 - Preloader
+- Responsive
 
 
 
