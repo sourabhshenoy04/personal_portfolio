@@ -121,6 +121,11 @@
     color: black;
     transform: scale(1);
 }
+.dark-theme .dbtn:hover {
+    background-color: rgb(138, 135, 135);
+    color: black;
+    transform: scale(1);
+}
 .theme-btn.sun .bxs-sun{
     display: block;
 }
