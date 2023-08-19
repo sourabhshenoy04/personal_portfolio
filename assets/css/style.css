@@ -589,6 +589,53 @@ button,input{
     display: block;
 }
 /* Project Section */
+.project_container{
+    overflow: initial;
+}
+.project_data{
+    text-align: center;
+}
+.project_content{
+    padding: 0 1.5rem;
+    display: grid;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+.project_img{
+    width: 100%; /* Adjust the width */
+    max-width: 265px; /* Add a max-width for larger screens */
+    border-radius: .5rem;
+    /* justify-self: center; */ /* Not needed with the grid centering */
+    margin: 0 auto; /* Center horizontally within the grid cell */
+    display: block;
+}
+.project_title{
+    font-size: var(--h3-font-size);
+    margin-bottom:var(--mb-0-5)
+}
+.project_description{
+    margin-bottom: var(--mb-0-75);
+}
+.swiper-container-horizontal > .swiper-pagination{
+    bottom: -2.5rem;
+}
+.swiper-button-prev, .swiper-button-next,.swiper-pagination-bullet {
+    outline: none;
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+    content: '';
+    display: none;
+}
+.swiper-project-icon{
+    font-size: 2rem;
+    color:steelblue;
+}
+.swiper-button-prev{
+    left: -.5rem;
+}
+.swiper-button-next{
+    right: -.5rem;
+}
 /* Contact me Section */
 .contact_container{
     grid-template-columns: 300px 340px;
