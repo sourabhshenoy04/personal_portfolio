@@ -602,6 +602,25 @@
             backDelay: 1500,
             loop: true
         })
+        // project section swiper
+        let swiper = new Swiper(".project_container", {
+            cssMode: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            // Add autoplay configuration
+            autoplay: {
+                delay: 100000, // Adjust this value as needed
+                disableOnInteraction: false, // Set to true if you want autoplay to pause on user interaction
+            },
+
+        });
     </script>
 </body>
 </html>
