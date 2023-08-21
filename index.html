@@ -20,6 +20,13 @@
 <!--     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Sourabh Shenoy</title>
+<!--     for emailjs file -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("hJ-Jihb1mebwJSMjF"); 
+        })();
+    </script>
 </head>
 
 <body>
@@ -523,20 +530,23 @@
                     </div>
                 </div>
                 <div class="contact_content">
-                    <form action="https://formspree.io/f/xqkobqvj" method="POST" class="contact_form">
+                    <form class="contact_form">
                         <div class="input_container">
-                            <input type="text" class="input" id="" placeholder="Name" name="name" required>
+                            <input type="text" class="input" id="name" placeholder="Name" name="name" required>
                         </div>
                         <div class="input_container">
-                            <input type="email" class="input" id="" required placeholder="Email" name="email">
+                            <input type="email" class="input" id="email" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" name="email">
                         </div>
                         <div class="input_container">
-                            <input type="text" class="input" id="" placeholder="Subject" name="subject" required>
+                            <input type="text" class="input" id="subject" placeholder="Subject" name="subject" required>
                         </div>
                         <div class="input_container">
-                            <textarea name="message" id="" class="input" placeholder="Message" required></textarea>
+                            <textarea name="message" id="message" class="input" placeholder="Message"
+                                required></textarea>
                         </div>
-                        <button type="submit" class="button"><i class='bx bx-mail-send bx-tada'></i>Submit</button>
+                        <button type="button" class="button" onclick="sendMail()"><i
+                                class='bx bx-mail-send bx-tada'></i>Submit</button>
                         <button type="reset" class="button"><i class='bx bx-reset bx-tada'></i>Reset</button>
                     </form>
                 </div>
@@ -625,6 +635,52 @@
             },
 
         });
+        //for contact form
+        function sendMail() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            if (!name || !email || !subject || !message) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            var params = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+            };
+
+            const serviceID = "service_fejk1gg";
+            const templateID = "template_6x6sl4o";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(function (response) {
+                    console.log("Email sent successfully:", response);
+                    alert("Message has been sent successfully!");
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                })
+                .catch(function (error) {
+                    console.error("Email send failed:", error);
+                    alert("An error occurred. Message was not sent.");
+                });
+        }
+
+        function isValidEmail(email) {
+            var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            return emailPattern.test(email);
+        }
     </script>
 </body>
 </html>
