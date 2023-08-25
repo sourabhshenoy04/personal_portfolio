@@ -14,6 +14,7 @@ This project shows my professional experience, skills and accomplishments in an 
 - Software used: Visual Studio Code
 - Icons used: Boxicons
 - Fonts used: Google Fonts
+- Javascript libraries used : SwiperJS, EmailJS
 
 
 
