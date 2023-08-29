@@ -545,20 +545,19 @@
                             <textarea name="message" id="message" class="input" placeholder="Message"
                                 required></textarea>
                         </div>
-                        <div class="input_container">
-                            <pre>Rate my website out of 5:</pre>
-                            <div class="rating">
-                                <input type="radio" id="rating5" name="rating" value="5" required>
-                                <label for="rating5">5</label>
-                                <input type="radio" id="rating4" name="rating" value="4">
-                                <label for="rating4">4</label>
-                                <input type="radio" id="rating3" name="rating" value="3">
-                                <label for="rating3">3</label>
-                                <input type="radio" id="rating2" name="rating" value="2">
-                                <label for="rating2">2</label>
-                                <input type="radio" id="rating1" name="rating" value="1">
-                                <label for="rating1">1</label>
-                            </div>
+                       <div class="input_container">
+                            <label for="rating">
+                                <pre>Rate my website out of 5:</pre>
+                            </label> 
+                           <br>
+                            <select id="rating" name="rating" class="rating_dropdown" required>
+                                <option value="" disabled selected>Select a rating</option>
+                                <option value="5">5 </option>
+                                <option value="4">4 </option>
+                                <option value="3">3 </option>
+                                <option value="2">2 </option>
+                                <option value="1">1 </option>
+                            </select>
                         </div>
                         <button type="button" class="button" onclick="sendMail()"><i
                                 class='bx bx-mail-send bx-tada'></i>Submit</button>
@@ -656,8 +655,7 @@
             var email = document.getElementById("email").value;
             var subject = document.getElementById("subject").value;
             var message = document.getElementById("message").value;
-            var rating = getSelectedRating();
-
+            var rating = document.getElementById("rating").value;
             if (!name || !email || !subject || !message || !rating) {
                 alert("Please fill in all required fields.");
                 return;
@@ -687,7 +685,7 @@
                     document.getElementById("email").value = "";
                     document.getElementById("subject").value = "";
                     document.getElementById("message").value = "";
-                    clearSelectedRating();
+                    document.getElementById("rating").value = "";
                 })
                 .catch(function (error) {
                     console.error("Email send failed:", error);
@@ -698,22 +696,6 @@
         function isValidEmail(email) {
             var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
             return emailPattern.test(email);
-        }
-        function getSelectedRating() {
-            var ratingInputs = document.getElementsByName("rating");
-            for (var i = 0; i < ratingInputs.length; i++) {
-                if (ratingInputs[i].checked) {
-                    return ratingInputs[i].value;
-                }
-            }
-            return null; // Return null if no rating is selected
-        }
-
-        function clearSelectedRating() {
-            var ratingInputs = document.getElementsByName("rating");
-            for (var i = 0; i < ratingInputs.length; i++) {
-                ratingInputs[i].checked = false;
-            }
         }
     </script>
 </body>
