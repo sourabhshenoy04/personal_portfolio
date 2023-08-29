@@ -746,6 +746,36 @@ textarea.input{
     width: 50%;
     opacity: 1;
 }
+/* for contact form */
+.rating_dropdown {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    border: 2px solid #f39c12; /* Border color */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #f39c12;
+    cursor: pointer;
+/*     background-image: url('../img/star.png');  New star icon URL  */
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+/* Style the dropdown arrow icon */
+.rating_dropdown::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+/* Hover effect */
+.rating_dropdown:hover {
+    border-color: #f7ca18; /* Hover border color */
+}
+
 /*Footer section*/
 .footer{
     padding-top: 2rem;
