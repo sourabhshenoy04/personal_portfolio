@@ -34,4 +34,11 @@ This project shows my professional experience, skills and accomplishments in an 
  
 ![App Screenshot](./assets/img/Preview.png)
 
+## Preview of how I receive messages on my personal Gmail through EmailJS:
+
+ 
+![App Screenshot](./assets/img/emailjs.png)
+
+
+
 
