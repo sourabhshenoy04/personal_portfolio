@@ -15,6 +15,7 @@ This project shows my professional experience, skills and accomplishments in an 
 - Icons used: Boxicons
 - Fonts used: Google Fonts
 - Javascript libraries used : SwiperJS, EmailJS
+- Free website hosting with the help of Vercel
 
 
 
